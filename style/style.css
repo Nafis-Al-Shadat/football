@@ -110,10 +110,12 @@ header {
 
 .header-item:hover .img-2 {
     animation-iteration-count: infinite;
+    cursor: pointer;
 }
 
 .header-item:hover .img-3 img {
     animation-iteration-count: infinite;
+    cursor: pointer;
 }
 
 .header-item img {
@@ -157,7 +159,7 @@ main {
 
 .players-container {
     width: 85%;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .players {
@@ -170,8 +172,9 @@ main {
     height: 474px;
     width: 330px;
     padding: 15px;
-    box-shadow: 0px 0px 20px #bbb;
+    box-shadow: 0px 0px 20px #ddd;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .player img {
@@ -187,6 +190,38 @@ main {
 }
 
 .player img {
+    width: 100%;
+}
+
+/*---------------------
+    Match Highlights
+--------------------*/
+.match-highlights {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.match-highlights-info h1 {
+    font-size: 48px;
+    margin: 3px
+}
+
+.match-highlights-info .button:hover {
+    border-radius: 25px;
+    background-color: #a8004c;
+}
+
+.match-highlights-info .button {
+    transition: all 1s ease;
+}
+
+.match-highlights-photo,
+.match-highlights-info {
+    width: 42%;
+}
+
+.match-highlights-photo img {
     width: 100%;
 }
 
@@ -249,7 +284,7 @@ main {
     }
 
     .header-item-text h1 {
-        font-size: 40px;
+        font-size: 36px;
     }
 
     .margin-left {
@@ -268,6 +303,7 @@ main {
         grid-template-columns: 1fr;
         width: 100vw;
         padding: 0px;
+        height: 100vh
     }
 
     .header-item {
@@ -278,14 +314,33 @@ main {
     /* players */
     .players-container {
         width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
     }
 
     .players {
         grid-template-columns: 1fr;
     }
 
-    .players-container {
-        display: flex;
-        justify-content: center;
+
+    /*Match Highlights*/
+
+    .match-highlights {
+        flex-direction: column-reverse;
+    }
+
+
+    .match-highlights-photo,
+    .match-highlights-info {
+        width: 100%;
+    }
+
+    .match-highlights-info div {
+        padding: 15px;
+    }
+
+    .match-highlights-info h1 {
+        font-size: 30px;
     }
 }
