@@ -20,7 +20,7 @@ body {
     cursor: pointer;
 }
 
-.button i {
+.button .fas {
     margin: 0 5px;
 }
 
@@ -200,6 +200,7 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 100px;
 }
 
 .match-highlights-info h1 {
@@ -225,6 +226,42 @@ main {
     width: 100%;
 }
 
+/*---------------------
+    Match Details
+--------------------*/
+.match-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 100px;
+    padding: 50px 0;
+    background-image: url(../images/Frame\ 58.jpg);
+}
+
+.match-details-info h1 {
+    font-size: 48px;
+    margin: 3px
+}
+
+.match-details-info .button:hover {
+    border-radius: 25px;
+    background-color: #a8004c;
+}
+
+.match-details-info .button {
+    transition: all 1s ease;
+}
+
+.match-details-photo,
+.match-details-info {
+    width: 42%;
+}
+
+.match-details-photo img {
+    width: 100%;
+}
+
+
 /*------------------
     Keyframes
 -------------------*/
@@ -240,7 +277,7 @@ main {
 
 @keyframes ball {
     100% {
-        transform: translate(-500px, -500px) scale(.4);
+        transform: translate(-500px, -500px) scale(.2);
         opacity: 0;
     }
 }
@@ -324,23 +361,33 @@ main {
     }
 
 
-    /*Match Highlights*/
+    /*Match Highlights & Match details*/
 
     .match-highlights {
         flex-direction: column-reverse;
+        margin-bottom: 50px;
     }
 
+    .match-details {
+        flex-direction: column;
+        margin-bottom: 50px;
+        padding: 0;
+    }
 
     .match-highlights-photo,
-    .match-highlights-info {
+    .match-highlights-info,
+    .match-details-photo,
+    .match-details-info {
         width: 100%;
     }
 
-    .match-highlights-info div {
+    .match-highlights-info div,
+    .match-details-info div {
         padding: 15px;
     }
 
-    .match-highlights-info h1 {
+    .match-highlights-info h1,
+    .match-details-info h1 {
         font-size: 30px;
     }
 }
