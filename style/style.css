@@ -24,6 +24,10 @@ body {
     margin: 0 5px;
 }
 
+.grey {
+    color: #555;
+}
+
 /*------------------
  navbar styles 
 ------------------*/
@@ -58,6 +62,10 @@ nav {
 /*---------------------
      Header styles
 ---------------------*/
+header {
+    margin-bottom: 50px;
+}
+
 .header-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -100,6 +108,13 @@ nav {
     margin: 5px;
 }
 
+.header-item:hover .img-2 {
+    animation-iteration-count: infinite;
+}
+
+.header-item:hover .img-3 img {
+    animation-iteration-count: infinite;
+}
 
 .header-item img {
     width: 100%
@@ -113,7 +128,7 @@ nav {
 .img-2 {
     position: absolute;
     top: 0;
-    animation: man 2s ease-out 500ms var(--iternation);
+    animation: man 2s ease-out 1s var(--iternation);
 }
 
 
@@ -126,9 +141,54 @@ nav {
 .img-3 img {
     height: 110px;
     width: 140px;
-    animation: ball 2s ease-out 500ms var(--iternation);
+    animation: ball 2s ease-out 1s var(--iternation);
 }
 
+/*-------------------
+    players section
+-------------------*/
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.players-container {
+    width: 85%;
+    margin-bottom: 50px;
+}
+
+.players {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.player {
+    height: 474px;
+    width: 330px;
+    padding: 15px;
+    box-shadow: 0px 0px 20px #bbb;
+    overflow: hidden;
+}
+
+.player img {
+    transition: all 1s ease;
+}
+
+.player-image {
+    overflow: hidden;
+}
+
+.player:hover img {
+    transform: scale(1.2);
+}
+
+.player img {
+    width: 100%;
+}
 
 /*------------------
     Keyframes
@@ -155,6 +215,39 @@ nav {
     Media Query
 -------------------*/
 @media only screen and (max-width:688px) {
+
+    /* header */
+    .nav-item ul {
+        display: none
+    }
+
+    .img-2,
+    .img-3 img {
+        animation-iteration-count: 2;
+    }
+
+    .img-3 {
+        position: absolute;
+        top: 60px;
+        left: -20px;
+    }
+
+    .img-3 img {
+        height: 75px;
+        width: 90px;
+    }
+
+    nav {
+        padding: 10px;
+        justify-content: space-between;
+    }
+
+    .nav-item .fa-bars {
+        display: block;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
     .header-item-text h1 {
         font-size: 40px;
     }
@@ -182,34 +275,17 @@ nav {
         height: auto;
     }
 
-    .nav-item ul {
-        display: none
+    /* players */
+    .players-container {
+        width: 100%;
     }
 
-    .img-2,
-    .img-3 img {
-        animation-iteration-count: infinite;
+    .players {
+        grid-template-columns: 1fr;
     }
 
-    .img-3 {
-        position: absolute;
-        top: 60px;
-        left: -20px;
-    }
-
-    .img-3 img {
-        height: 75px;
-        width: 90px;
-    }
-
-    nav {
-        padding: 10px;
-        justify-content: space-between;
-    }
-
-    .nav-item .fa-bars {
-        display: block;
-        font-size: 20px;
-        margin-left: 10px;
+    .players-container {
+        display: flex;
+        justify-content: center;
     }
 }
